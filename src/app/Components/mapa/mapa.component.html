@@ -1,0 +1,419 @@
+<div class="container-fluid">
+    <h3 class="text-dark mb-4">Rutas</h3>
+    <div class="card shadow">
+        <div class="card-header py-3">
+            <p class="text-primary m-0 fw-bold">Informacion de rutas</p>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <!-- <div class="col-md-6 text-nowrap">
+                    <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable"><label class="form-label">Ver<select class="d-inline-block form-select form-select-sm">
+                                <option value="10" selected="">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>&nbsp;</label></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-md-end dataTables_filter" id="dataTable_filter"><label class="form-label"><input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Search" value="Buscar"></label></div>
+                </div> -->
+            </div>
+            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                    <mat-tab label="PLAZA DEL RELOJ">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- Plaza del reloj 31.663479390819493, -106.39393778652075-->
+                        <agm-marker [latitude]="31.663479390819493" [longitude]="-106.39393778652075">
+                          <agm-info-window>
+                            <strong>PLAZA DEL RELOJ</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.663479390819493" [longitude]="-106.39393778652075"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                    <mat-tab label="PLAZA LAS TORRES">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- Plaza las torres 31.62355606468417, -106.39555098072567-->
+                      <agm-marker [latitude]="31.62355606468417" [longitude]="-106.39555098072567">
+                        <agm-info-window>
+                          <strong>PLAZA LAS TORRES (Telcel)</strong>
+                        </agm-info-window>
+                      </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.62355606468417" [longitude]="-106.39555098072567"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                    <mat-tab label="RAYÓN Y LUCERO">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- Av. Ramón Rayón y C. Lucero (González) 31.620769860250558, -106.4080302012517-->
+                        <agm-marker [latitude]="31.620769860250558" [longitude]="-106.4080302012517">
+                          <agm-info-window>
+                            <strong>RAYÓN Y LUCERO (González)</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.620769860250558" [longitude]="-106.4080302012517"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                    <mat-tab label="PLAZA SENDERO">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- Plaza sendero 31.692414838271382, -106.38065774278475-->
+                        <agm-marker [latitude]="31.692414838271382" [longitude]="-106.38065774278475">
+                          <agm-info-window>
+                            <strong>PLAZA SENDERO (Coppel)</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.692414838271382" [longitude]="-106.38065774278475"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                    <mat-tab label="PORVENIR">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- Carretera Porvenir y Blvd. Independencia (Del Rio) 31.644142079110633, -106.34743098289375-->
+                      <agm-marker [latitude]="31.644142079110633" [longitude]="-106.34743098289375">
+                        <agm-info-window>
+                          <strong>PORVENIR (Del Rio)</strong>
+                        </agm-info-window>
+                      </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.644142079110633" [longitude]="-106.34743098289375"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                    <mat-tab label="INDEPENDENCIA">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- SMART Libramiento 31.627477517629234, -106.35488143122734-->
+                        <agm-marker [latitude]="31.627477517629234" [longitude]="-106.35488143122734">
+                          <agm-info-window>
+                            <strong>INDEPENDENCIA (SMART)</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.627477517629234" [longitude]="-106.35488143122734"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                    <mat-tab label="TORRES LIBRAMIENTO">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- Av. De las Torres y Av. Libramiento 31.606016123593214, -106.39814291915008-->
+                        <agm-marker [latitude]="31.606016123593214" [longitude]="-106.39814291915008">
+                          <agm-info-window>
+                            <strong>TORRES LIBRAMIENTO (Acotamiento)</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.606016123593214" [longitude]="-106.39814291915008"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                    <mat-tab label="AZTECAS">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- Blvd. Zaragoza y Av. Aztecas (Entre Smart y González) 31.66199129751799, -106.47322799738413-->
+                      <agm-marker [latitude]="31.66199129751799" [longitude]="-106.39814291915008">
+                        <agm-info-window>
+                          <strong>AZTECAS (Entre Smart y González)</strong>
+                        </agm-info-window>
+                      </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.66199129751799" [longitude]="-106.39814291915008"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                    <mat-tab label="SANTOS DUMONT">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- Eje Vial Juan Gabriel y C. Santos Dumont (S-mart Santos Dumont) 31.631745773037856, -106.45969070815197-->
+                      <agm-marker [latitude]="31.631745773037856" [longitude]="-106.45969070815197">
+                        <agm-info-window>
+                          <strong>SANTOS DUMONT (S-mart)</strong>
+                        </agm-info-window>
+                      </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.631745773037856" [longitude]="-106.45969070815197"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                    <mat-tab label="PANAMERICANA">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- Blvd. Zaragoza y Av. Panamericana (Carls Jr) 31.65705804803107, -106.43031812408947-->
+                      <agm-marker [latitude]="31.65705804803107" [longitude]="-106.43031812408947">
+                        <agm-info-window>
+                          <strong>PANAMERICANA (Carls Jr.)</strong>
+                        </agm-info-window>
+                      </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.65705804803107" [longitude]="-106.43031812408947"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                    <mat-tab label="TORRES HENEQUEN">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- Av. De las Torres y C. Porfirio Díaz (Soriana) 31.649561848243668, -106.38918843444787-->
+                      <agm-marker [latitude]="31.649561848243668" [longitude]="-106.38918843444787">
+                        <agm-info-window>
+                          <strong>TORRES HENEQUEN (Soriana)</strong>
+                        </agm-info-window>
+                      </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.649561848243668" [longitude]="-106.38918843444787"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                    <mat-tab label="BODEGA AURRERA INDEPENDENCIA">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- BODEGA AURRERA INDEPENDENCIA Blvd. Independencia y C. Ibarrola 31.596504170777965, -106.38386392381925-->
+                      <agm-marker [latitude]="31.596504170777965" [longitude]="-106.38386392381925">
+                        <agm-info-window>
+                          <strong>BODEGA AURRERA INDEPENDENCIA</strong>
+                        </agm-info-window>
+                      </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.596504170777965" [longitude]="-106.38386392381925"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                    <mat-tab label="PLAZA PINOCELLI">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- PLAZA PINOCELLI 31.635992100209705, -106.41135248457677-->
+                      <agm-marker [latitude]="31.635992100209705" [longitude]="-106.41135248457677">
+                        <agm-info-window>
+                          <strong>PLAZA PINOCELLI</strong>
+                        </agm-info-window>
+                      </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.635992100209705" [longitude]="-106.41135248457677"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                    <mat-tab label="PLAZA JUAREZ">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- PLAZA JUAREZ 31.707012772123726, -106.42793866833664-->
+                      <agm-marker [latitude]="31.707012772123726" [longitude]="-106.42793866833664">
+                        <agm-info-window>
+                          <strong>PLAZA JUAREZ</strong>
+                        </agm-info-window>
+                      </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.707012772123726" [longitude]="-106.42793866833664"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                    <mat-tab label="TORRES DEL SUR">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- TORRES DEL SUR 31.60717066520423, -106.39920791067351-->
+                      <agm-marker [latitude]="31.60717066520423" [longitude]="-106.39920791067351">
+                        <agm-info-window>
+                          <strong>TORRES DEL SUR</strong>
+                        </agm-info-window>
+                      </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.60717066520423" [longitude]="-106.39920791067351"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                    <mat-tab label="CARLOS AMAYA">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- CARLOS AMAYA 31.70268738789974, -106.48386627900292-->
+                      <agm-marker [latitude]="31.70268738789974" [longitude]="-106.48386627900292">
+                        <agm-info-window>
+                          <strong>CARLOS AMAYA</strong>
+                        </agm-info-window>
+                      </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.70268738789974" [longitude]="-106.48386627900292"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                    <mat-tab label="CENTRO">
+                      <agm-map [latitude]="latCU" [longitude]="lngCU" [zoom]="12" [mapTypeControl]='true'>
+                    
+                        <!-- CENTRO 31.622781914854794, -106.45758212551593-->
+                      <agm-marker [latitude]="31.622781914854794" [longitude]="-106.45758212551593">
+                        <agm-info-window>
+                          <strong>CENTRO</strong>
+                        </agm-info-window>
+                      </agm-marker>
+                      
+                        <agm-polyline [visible]="true" [strokeWeight]="3" [strokeColor]="'#07b57a'">
+                          <agm-polyline-point [latitude]="31.622781914854794" [longitude]="-106.45758212551593"></agm-polyline-point>
+                          <agm-polyline-point [latitude]="latCU" [longitude]="lngCU"></agm-polyline-point>
+                        </agm-polyline>
+                        
+                        <!-- CU 31.49452026670812, -106.4156053900569-->
+                        <agm-marker [latitude]="latCU" [longitude]="lngCU">
+                          <agm-info-window>
+                            <strong>DMCU</strong>
+                          </agm-info-window>
+                        </agm-marker>
+                      </agm-map>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</div>
+
