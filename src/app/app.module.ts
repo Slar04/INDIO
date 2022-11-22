@@ -29,6 +29,7 @@ import { LogInComponent } from './Components/log-in/log-in.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 
 const routes: Routes = [
+  { path: '', component: MapaComponent},
   { path: 'home', component: AppComponent},
   { path: 'mapa', component: MapaComponent },
   { path: 'perfil', component: PerfilComponent},
