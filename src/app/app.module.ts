@@ -37,7 +37,10 @@ const routes: Routes = [
   { path: 'side-menu', component: SideMenuComponent},
   { path: 'tiempo-espera', component: TiempoEsperaComponent},
   { path: 'usuarios', component: UsuariosComponent},
-  { path: 'capacidad', component: CapacidadComponent}
+  { path: 'capacidad', component: CapacidadComponent},
+  { path: 'log-in', component: LogInComponent},
+  { path: 'registro', component: RegistroComponent}
+
 ];
 
 @NgModule({
